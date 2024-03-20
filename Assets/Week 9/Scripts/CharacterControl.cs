@@ -1,13 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
-using UnityEngine.UI;
 using UnityEngine;
 
 public class CharacterControl : MonoBehaviour
 {
-    public TextMeshProUGUI typeText;
+    public TMPro.TextMeshProUGUI currentSelection;
+    public static CharacterControl Instance;
     public static Villager SelectedVillager { get; private set; }
     public static void SetSelectedVillager(Villager villager)
     {
@@ -21,12 +20,9 @@ public class CharacterControl : MonoBehaviour
 
     private void Update()
     {
-        if (SelectedVillager != null)
+        if(SelectedVillager != null)
         {
-            typeText.text = SelectedVillager.GetType().ToString();
-        } else
-        {
-            typeText.text = "No Selection";
+            currentSelection.text = SelectedVillager.ToString();
         }
     }
 }

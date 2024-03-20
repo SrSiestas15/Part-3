@@ -5,13 +5,18 @@ using UnityEngine;
 public class Archer : Villager
 {
     public GameObject arrowPrefab;
-    public Transform arrowSpawn;
+    public Transform spawnPoint;
 
     protected override void Attack()
     {
         destination = transform.position;
         base.Attack();
-        Instantiate(arrowPrefab, arrowSpawn.position, arrowSpawn.rotation);
+        Instantiate(arrowPrefab, spawnPoint.position, spawnPoint.rotation);
+    }
+
+    public override string ToString()
+    {
+        return "I'm Bob, the archer!";
     }
 
     public override ChestType CanOpen()
