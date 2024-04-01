@@ -10,7 +10,6 @@ public class Blue : Avatar
     public GameObject arrowPrefab;
     public Transform arrowSpawn;
 
-
     protected override void Special()
     {
         if (attacking == false)

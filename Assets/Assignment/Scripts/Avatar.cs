@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Avatar : MonoBehaviour
@@ -10,21 +11,23 @@ public class Avatar : MonoBehaviour
     int health = 4;
     protected SpriteRenderer spriteRenderer;
     public float force = 10f;
-    protected Color specialColor;
-    protected Color regColor;
+    protected bool isSelected;
 
-    private void Start()
+    protected virtual void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
     protected virtual void Update()
     {
-        direction.x = Input.GetAxis("Horizontal");
-        direction.y = Input.GetAxis("Vertical");
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (isSelected)
         {
-            Special();
+            direction.x = Input.GetAxis("Horizontal");
+            direction.y = Input.GetAxis("Vertical");
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Special();
+            }
         }
     }
     private void FixedUpdate()
@@ -35,5 +38,13 @@ public class Avatar : MonoBehaviour
     protected virtual void Special()
     {
         
+    }
+
+    public void Selected(bool value)
+    {
+        if(value) { 
+            force = 700;
+        }
+        isSelected = value;
     }
 }
