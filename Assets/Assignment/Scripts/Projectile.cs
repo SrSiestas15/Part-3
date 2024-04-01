@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
 {
     public float speed = 150f;
     Rigidbody2D rigidbody;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,9 +14,9 @@ public class Projectile : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        rigidbody.AddForce(transform.position);
+        transform.Translate(0, speed * Time.deltaTime, 0);
     }
 
 }

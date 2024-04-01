@@ -7,7 +7,6 @@ public class Red : Avatar
 {
     float dashPower = 5;
     bool dashing = false;
-
     protected override void Special()
     {
         if (dashing == false)

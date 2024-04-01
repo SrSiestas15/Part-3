@@ -750,7 +750,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5d5ad89dd15da4fa12fed8e3b0cfa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 1595389244}
+  collector: {fileID: 4899916981493597996, guid: c7078d914d4a37640bfe863fa89397c5, type: 3}
+  collectorTag: projectile
 --- !u!50 &455804929
 Rigidbody2D:
   serializedVersion: 4
@@ -1070,6 +1071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collector: {fileID: 4899916981493597996, guid: c7078d914d4a37640bfe863fa89397c5, type: 3}
+  collectorTag: projectile
 --- !u!50 &633261808
 Rigidbody2D:
   serializedVersion: 4
@@ -1384,6 +1386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collector: {fileID: 597634507}
+  collectorTag: red
 --- !u!50 &1340015230
 Rigidbody2D:
   serializedVersion: 4
@@ -1531,6 +1534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collector: {fileID: 597634507}
+  collectorTag: red
 --- !u!50 &1363437927
 Rigidbody2D:
   serializedVersion: 4
@@ -2153,6 +2157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collector: {fileID: 597634507}
+  collectorTag: red
 --- !u!50 &1897804063
 Rigidbody2D:
   serializedVersion: 4
@@ -2314,7 +2319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa5d5ad89dd15da4fa12fed8e3b0cfa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 1595389244}
+  collector: {fileID: 4899916981493597996, guid: c7078d914d4a37640bfe863fa89397c5, type: 3}
+  collectorTag: projectile
 --- !u!50 &2120506084
 Rigidbody2D:
   serializedVersion: 4
@@ -2323,7 +2329,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120506081}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

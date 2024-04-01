@@ -13,6 +13,7 @@ public class Avatar : MonoBehaviour
     public float force = 10f;
     protected bool isSelected;
 
+
     protected virtual void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
