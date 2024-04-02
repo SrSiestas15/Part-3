@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class Collectable : MonoBehaviour
@@ -20,7 +21,14 @@ public class Collectable : MonoBehaviour
         {
             score++;
             //Debug.Log(score);
+            totalScore = score;
             Destroy(gameObject);
         }
+    }
+
+    public static void ResetScore()
+    {
+        score = 0;
+        
     }
 }

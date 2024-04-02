@@ -10,6 +10,7 @@ public class RestartButton : MonoBehaviour
 
     public void restart()
     {
+        Collectable.ResetScore();
         SceneManager.LoadScene(0);
     }
 }
