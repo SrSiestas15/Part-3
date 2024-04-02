@@ -5,16 +5,21 @@ using UnityEngine;
 public class Collectable : MonoBehaviour
 {
     protected static int score = 0;
-    public GameObject collector;
+    public static int totalScore = 0;
     public string collectorTag;
+
+    private void Update()
+    {
+        totalScore = score;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision: " + collision.gameObject.tag + " Collector: " + collectorTag);
+        //Debug.Log("Collision: " + collision.gameObject.tag + " Collector: " + collectorTag);
         if (collision.gameObject.tag == collectorTag)
         {
             score++;
-            Debug.Log(score);
+            //Debug.Log(score);
             Destroy(gameObject);
         }
     }
